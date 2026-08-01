@@ -8,22 +8,21 @@
 /* ==========================================
    ROOT VARIABLES
 ========================================== */
-
 :root{
 
-    --bg:var(--bg);
+    --bg:#0B0B0F;
 
-    --surface:var(--surface);
+    --surface:#15151A;
 
-    --surface-hover:var(--surface-hover);
+    --surface-hover:#1C1C22;
 
-    --border:var(--border);
+    --border:#26262C;
 
-    --text:var(--text);
+    --text:#FFFFFF;
 
-    --secondary:var(--secondary);
+    --secondary:#9CA3AF;
 
-    --accent:var(--accent);
+    --accent:#3B82F6;
 
     --success:#22C55E;
 
@@ -104,15 +103,18 @@ body{
 .hero h1{
 
     font-size:72px;
+
     line-height:1.1;
 
     margin-bottom:20px;
+
     font-weight:700;
 
-letter-spacing:-2px;
-max-width:650px;
+    letter-spacing:-2px;
 
-line-height:1.8;
+    max-width:650px;
+
+    
 
 }
 
@@ -185,12 +187,12 @@ line-height:1.8;
 
 .hero-search button:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px) scale(1.03);
 
     box-shadow:
-        0 0 10px rgba(59,130,246,.45),
-        0 0 30px rgba(59,130,246,.25),
-        0 12px 30px rgba(0,0,0,.35);
+        0 0 12px rgba(255,255,255,.12),
+        0 0 28px rgba(255,255,255,.08),
+        0 15px 35px rgba(0,0,0,.45);
 
 }
 
@@ -225,11 +227,11 @@ line-height:1.8;
 
     color:white;
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
     box-shadow:
-        0 0 10px rgba(255,255,255,.06),
-        0 0 20px rgba(255,255,255,.03);
+        0 0 10px rgba(255,255,255,.08),
+        0 0 18px rgba(255,255,255,.05);
 
 }
 
@@ -328,11 +330,14 @@ line-height:1.8;
 
     cursor:pointer;
 
-    transition:all .35s ease;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background-color .25s ease;
 
 }
 
-/* Theme Button Size */
+/* Theme Button */
 
 .theme-btn{
 
@@ -348,18 +353,21 @@ line-height:1.8;
 
 }
 
+/* Hover */
+
+/* Hover */
 
 .login-btn:hover,
 .theme-btn:hover{
 
     background:var(--surface-hover);
 
-    transform:translateY(-3px);
+    transform:translateY(-4px) scale(1.03);
 
     box-shadow:
         0 0 8px rgba(255,255,255,.08),
-        0 0 20px rgba(255,255,255,.05),
-        0 8px 25px rgba(0,0,0,.35);
+        0 0 18px rgba(255,255,255,.05),
+        0 12px 30px rgba(0,0,0,.45);
 
 }
 
@@ -423,30 +431,24 @@ line-height:1.8;
 
 .tool-card{
 
-    background:var(--surface);
-
-    border:1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:30px;
-
-    transition:.35s ease;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 
 }
-
-/* Hover */
 
 .tool-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-8px) scale(1.02);
+
+    border-color:rgba(255,255,255,.12);
 
     box-shadow:
         0 0 15px rgba(255,255,255,.05),
-        0 15px 35px rgba(0,0,0,.35);
+        0 15px 40px rgba(0,0,0,.45);
 
 }
-
 /* Icon */
 
 .tool-icon{
