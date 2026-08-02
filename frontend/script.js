@@ -9,7 +9,7 @@ const button = document.getElementById("generateBtn");
 const qrImage = document.getElementById("qrImage");
 const downloadBtn = document.getElementById("downloadBtn");
 const errorMessage = document.getElementById("errorMessage");
-
+const qrCard = document.getElementById("qrCard");
 
 // ==========================================
 // Generate QR
@@ -18,21 +18,23 @@ const errorMessage = document.getElementById("errorMessage");
 button.addEventListener("click", () => {
 
     const text = input.value.trim();
-
+    
     // Empty Input
 
     if (text === "") {
 
-        errorMessage.textContent = "Please enter a URL or some text.";
+    errorMessage.textContent = "Please enter a URL or some text.";
 
-        qrImage.style.display = "none";
-        downloadBtn.style.display = "none";
+    qrCard.style.display = "none";
 
-        input.focus();
+    button.disabled = false;
+    button.textContent = "Generate QR";
 
-        return;
+    input.focus();
 
-    }
+    return;
+
+}
 
     // Clear previous error
 
@@ -41,16 +43,25 @@ button.addEventListener("click", () => {
     // Backend URL
 
     const url =
-        `http://127.0.0.1:8000/generate?text=${encodeURIComponent(text)}`;
-
+`http://127.0.0.1:8000/generate?text=${encodeURIComponent(text)}&t=${Date.now()}`;
     // Display QR
+
+    
+
+button.disabled = true;
+button.textContent = "Generating...";
+
+setTimeout(() => {
 
     qrImage.src = url;
 
-    qrImage.style.display = "block";
+    qrCard.style.display = "flex";
 
-    downloadBtn.style.display = "inline-block";
+    button.disabled = false;
 
+    button.textContent = "Generate QR";
+
+}, 700);
 });
 
 
