@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>PDF Merge | Forge</title>
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+         NAVBAR
+    ============================ -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <a href="index.html"
+                style="text-decoration:none;color:inherit;">
+
+                Forge
+
+            </a>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search tools...">
+
+        </div>
+
+        <div class="nav-right">
+
+            <button class="login-btn">
+
+                Login
+
+            </button>
+
+            <button class="theme-btn">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- ===========================
+         HERO
+    ============================ -->
+
+    <section class="hero">
+
+        <h1>
+
+            PDF Merge
+
+        </h1>
+
+        <p>
+
+            Merge multiple PDF files into one document.
+
+        </p>
+
+        <div class="pdf-upload">
+
+            <input
+                type="file"
+                id="pdf1"
+                accept=".pdf">
+
+            <input
+                type="file"
+                id="pdf2"
+                accept=".pdf">
+
+            <button
+                id="mergeBtn">
+
+                Merge PDFs
+
+            </button>
+
+        </div>
+
+        <p
+            id="statusMessage"
+            class="error-message">
+
+        </p>
+
+    </section>
+
+    <script src="pdf.js"></script>
+
+</body>
+
+</html>
