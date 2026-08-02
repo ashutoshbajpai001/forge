@@ -490,3 +490,103 @@ body{
     font-weight:600;
 
 }
+
+
+
+/* ==========================================
+   QR RESULT
+========================================== */
+
+.qr-result{
+
+    margin-top:40px;
+
+    margin-bottom:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+#qrImage{
+
+    width:250px;
+
+    display:none;
+
+    border-radius:16px;
+
+    background:white;
+
+    padding:12px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.error-message{
+
+    margin-top:18px;
+
+    color:#ff6b6b;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    min-height:22px;
+
+}
+
+
+
+
+
+
+/* ==========================================
+   DOWNLOAD BUTTON
+========================================== */
+
+#downloadBtn{
+
+    padding:14px 28px;
+
+    background:var(--accent);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+}
+
+#downloadBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.12),
+        0 10px 25px rgba(0,0,0,.35);
+
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Generator | Forge</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="index.html" style="text-decoration:none; color:inherit;">
+                Forge
+            </a>
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search tools...">
+
+        </div>
+
+        <div class="nav-right">
+
+            <button class="login-btn">
+                Login
+            </button>
+
+            <button class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         QR GENERATOR
+    =========================================== -->
+
+    <section class="hero">
+
+        <h1>
+
+            QR Code Generator
+
+        </h1>
+
+        <p>
+
+            Generate QR Codes instantly for URLs, text and more.
+
+        </p>
+
+
+
+        <!-- Search -->
+
+        <div class="hero-search">
+
+            <input
+                id="qrInput"
+                type="text"
+                placeholder="Paste URL or Text...">
+
+            <button
+                id="generateBtn">
+
+                Generate QR
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Error Message -->
+
+        <p
+            id="errorMessage"
+            class="error-message">
+
+        </p>
+
+
+
+        <!-- QR Result -->
+
+        <div class="qr-result">
+
+            <img
+                id="qrImage"
+                alt="Generated QR Code"
+                style="display:none;">
+
+            <button
+                id="downloadBtn"
+                style="display:none;">
+
+                Download PNG
+
+            </button>
+
+        </div>
+
+
+
+        <p class="hero-footer">
+
+            Trusted by developers, students and creators.
+
+        </p>
+
+    </section>
+
+
+
+    <hr class="divider">
+
+
+
+    <!-- ==========================================
+         JavaScript
+    =========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
