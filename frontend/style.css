@@ -265,6 +265,14 @@ body{
 
 }
 
+.logo a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
 
 /* ==========================================
    SEARCH BOX

@@ -121,3 +121,62 @@ input.addEventListener("keydown", (event) => {
     }
 
 });
+
+
+// ==========================================
+// Homepage Search
+// ==========================================
+
+const searchInput = document.querySelector(".hero-search input");
+const searchButton = document.querySelector(".hero-search button");
+
+if (searchInput && searchButton) {
+
+    function searchTool(){
+
+    const value = searchInput.value
+        .trim()
+        .toLowerCase();
+
+    const tool = tools.find(t =>
+        t.keywords.includes(value)
+    );
+
+    if(!tool){
+
+        alert("No tool found.");
+
+        return;
+
+    }
+
+    if(tool.page){
+
+        window.location.href = tool.page;
+
+    }
+
+    else{
+
+        alert(tool.name + " is coming soon!");
+
+    }
+
+}
+
+
+
+    searchButton.addEventListener("click", searchTool);
+
+    searchInput.addEventListener("keydown", function(event){
+
+        if(event.key === "Enter"){
+
+            searchTool();
+
+        }
+
+    });
+
+
+}
