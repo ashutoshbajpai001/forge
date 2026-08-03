@@ -41,22 +41,35 @@ mergeBtn.addEventListener("click", async () => {
 
         }
 
-        const blob = await response.blob();
+      const blob = await response.blob();
 
-        const url = URL.createObjectURL(blob);
+console.log(blob);
 
-        const a = document.createElement("a");
+if (blob.size === 0) {
 
-        a.href = url;
-        a.download = "merged.pdf";
+    throw new Error("Received empty PDF.");
 
-        document.body.appendChild(a);
+}
 
-        a.click();
+const fileURL = URL.createObjectURL(blob);
 
-        a.remove();
+const link = document.createElement("a");
 
-        URL.revokeObjectURL(url);
+link.href = fileURL;
+
+link.setAttribute("download", "merged.pdf");
+
+document.body.appendChild(link);
+
+link.click();
+
+document.body.removeChild(link);
+
+setTimeout(() => {
+
+    URL.revokeObjectURL(fileURL);
+
+}, 1000);
 
         statusMessage.textContent = "✅ PDF merged successfully!";
 

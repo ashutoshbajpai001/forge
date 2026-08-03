@@ -1,34 +1,28 @@
-
-from fastapi import UploadFile, File
-from fastapi.responses import FileResponse
-from pypdf import PdfWriter
-import tempfile
-
-
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 
+from pypdf import PdfWriter
 import qrcode
 import io
 
 app = FastAPI()
+
+# ==========================================
 # Allow Frontend to Access Backend
+# ==========================================
 
 app.add_middleware(
-
     CORSMiddleware,
-
     allow_origins=["http://127.0.0.1:5500"],
-
     allow_credentials=True,
-
     allow_methods=["*"],
-
     allow_headers=["*"],
-
 )
 
+# ==========================================
+# Home
+# ==========================================
 
 @app.get("/")
 def home():
@@ -37,6 +31,9 @@ def home():
         "status": "Backend Running 🚀"
     }
 
+# ==========================================
+# QR Generator
+# ==========================================
 
 @app.get("/generate")
 def generate_qr(text: str):
@@ -49,13 +46,19 @@ def generate_qr(text: str):
 
     buffer.seek(0)
 
-    return StreamingResponse(buffer, media_type="image/png")
+    return StreamingResponse(
+        buffer,
+        media_type="image/png"
+    )
+
+# ==========================================
+# PDF Merge
+# ==========================================
 
 @app.post("/merge")
 async def merge_pdfs(
 
     pdf1: UploadFile = File(...),
-
     pdf2: UploadFile = File(...)
 
 ):
@@ -63,27 +66,19 @@ async def merge_pdfs(
     writer = PdfWriter()
 
     writer.append(pdf1.file)
-
     writer.append(pdf2.file)
 
-    temp = tempfile.NamedTemporaryFile(
+    buffer = io.BytesIO()
 
-        delete=False,
+    writer.write(buffer)
+    writer.close()
 
-        suffix=".pdf"
+    buffer.seek(0)
 
-    )
-
-    writer.write(temp)
-
-    temp.close()
-
-    return FileResponse(
-
-        temp.name,
-
+    return StreamingResponse(
+        buffer,
         media_type="application/pdf",
-
-        filename="merged.pdf"
-
+        headers={
+            "Content-Disposition": "attachment; filename=merged.pdf"
+        }
     )
