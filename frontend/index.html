@@ -2,162 +2,101 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Forge</title>
+    <meta name="description" content="Forge — Every digital tool you need in one place. QR generators, PDF tools, image compressors and more. Free, fast and secure.">
+    <title>Forge — Every Digital Tool. One Platform.</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- ==========================================
-         NAVBAR
-    =========================================== -->
-
+    <!-- NAVBAR -->
     <nav class="navbar">
 
-        <div class="logo">
-            <a href="index.html">Forge</a>
-        </div>
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                placeholder="Search tools...">
-
-        </div>
+        <div class="logo">Forge</div>
 
         <div class="nav-right">
-
-            <button class="login-btn">
-                Login
-            </button>
-
+            <button class="login-btn" id="loginBtn">Login</button>
             <button class="theme-btn" id="themeBtn">
-
-                 <i class="fa-solid fa-moon" id="themeIcon"></i>
-
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
-
         </div>
 
     </nav>
 
 
-
-    <!-- ==========================================
-         HERO SECTION
-    =========================================== -->
-
+    <!-- HERO SECTION -->
     <section class="hero">
 
+        <div class="hero-badge">
+            <span>✦</span> Free &amp; Open — No Account Required
+        </div>
+
         <h1>
-
-            Every Digital Tool.
-            <br>
-            One Platform.
-
+            Every Digital Tool.<br>
+            <span class="gradient-text">One Platform.</span>
         </h1>
 
         <p>
-
             Find, create and automate your digital work in seconds.
-
+            QR codes, PDFs, images and more — all in one place.
         </p>
 
         <div class="hero-search">
-
             <input
                 type="text"
-                placeholder="Search tools...">
-
-            <button>
-
-                Search
-
+                id="searchInput"
+                placeholder="Search QR, PDF, Image, AI tools...">
+            <button class="search-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>&nbsp; Search
             </button>
-
         </div>
 
         <div class="popular-tags">
-
-            <a href="qr.html">QR</a>
-
-            <a href="pdf.html">PDF</a>
-
-             <a href="#">Image</a>
-
-            <a href="#">AI</a>
-
+            <a href="qr.html">⚡ QR Code</a>
+            <a href="pdf.html">📄 PDF Merge</a>
+            <a href="image.html">🖼 Image Tools</a>
+            <a href="#">🤖 AI Tools</a>
         </div>
 
         <p class="hero-footer">
-
-            Trusted by developers, students and creators.
-
+            Trusted by developers, students and creators worldwide.
         </p>
 
     </section>
 
 
+    <!-- STATS BAR -->
+    <div class="stats-bar reveal">
+        <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Free Tools</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">0</span>
+            <span class="stat-label">Sign-ups Needed</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Free Forever</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Uses Per Day</span>
+        </div>
+    </div>
+
 
     <hr class="divider">
 
-    <!-- ==========================================
-     ABOUT FORGE
-========================================== -->
 
-<section class="about">
-
-    <h2>About Forge</h2>
-
-    <p>
-
-        Forge is a growing collection of free online tools
-        built for students, developers, creators, and everyday users.
-
-    </p>
-
-    <div class="about-features">
-
-        <div class="feature">
-
-            ⚡ Fast
-
-        </div>
-
-        <div class="feature">
-
-            🔒 Secure
-
-        </div>
-
-        <div class="feature">
-
-            💯 Free
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-    <!-- ==========================================
-         POPULAR TOOLS
-    =========================================== -->
-
+    <!-- POPULAR TOOLS -->
     <section class="tools">
 
         <h2>🔥 Popular Tools</h2>
@@ -165,86 +104,35 @@
         <div class="tools-grid">
 
             <!-- QR Generator -->
-
             <div class="tool-card">
-
-                <div class="tool-icon">
-                    ⚡
-                </div>
-
+                <div class="tool-icon purple">⚡</div>
                 <h3>QR Generator</h3>
-
-                <p>
-                    Generate QR Codes instantly for URLs and text.
-                </p>
-
-                <a href="qr.html">
-                    Open Tool →
-                </a>
-
+                <p>Generate QR Codes instantly for URLs, plain text and more. Free and unlimited.</p>
+                <a href="qr.html">Open Tool &rarr;</a>
             </div>
 
-
-            <!-- PDF -->
-
+            <!-- PDF Merge -->
             <div class="tool-card">
-
-                <div class="tool-icon">
-                    📄
-                </div>
-
+                <div class="tool-icon blue">📄</div>
                 <h3>PDF Tools</h3>
-
-                <p>
-                    Merge, Split and Compress PDFs.
-                </p>
-
-                <a href="pdf.html">
-                    Open Tool →
-                </a>
-
+                <p>Merge, split and compress PDF files effortlessly. No uploads to third-party servers.</p>
+                <a href="pdf.html">Open Tool &rarr;</a>
             </div>
 
-
-            <!-- Image -->
-
+            <!-- Image Tools -->
             <div class="tool-card">
-
-                <div class="tool-icon">
-                    🖼
-                </div>
-
+                <div class="tool-icon pink">🖼️</div>
                 <h3>Image Tools</h3>
-
-                <p>
-                    Resize, Compress and Convert Images.
-                </p>
-
-                <a href="#">
-                    Coming Soon
-                </a>
-
+                <p>Resize, compress and convert JPG &amp; PNG images without losing quality.</p>
+                <a href="image.html">Open Tool &rarr;</a>
             </div>
 
-
-            <!-- AI -->
-
+            <!-- AI Tools -->
             <div class="tool-card">
-
-                <div class="tool-icon">
-                    🤖
-                </div>
-
+                <div class="tool-icon green">🤖</div>
                 <h3>AI Tools</h3>
-
-                <p>
-                    Smart AI utilities coming soon.
-                </p>
-
-                <a href="#">
-                    Coming Soon
-                </a>
-
+                <p>Smart AI utilities to supercharge your workflow. Coming very soon.</p>
+                <span class="badge-soon">Coming Soon</span>
             </div>
 
         </div>
@@ -252,14 +140,72 @@
     </section>
 
 
-<script src="tools.js"></script>
-<script src="script.js"></script>
-<script src="theme.js"></script>
+    <hr class="divider">
 
 
+    <!-- ABOUT FORGE -->
+    <section class="about reveal">
 
-    
+        <h2>Why Forge?</h2>
+
+        <p>
+            Forge is a growing collection of free, browser-based tools
+            built for students, developers, creators, and everyday users.
+            No accounts. No watermarks. No nonsense.
+        </p>
+
+        <div class="about-features">
+
+            <div class="feature">
+                <span class="feature-icon">⚡</span>
+                <div class="feature-title">Blazing Fast</div>
+                <div class="feature-desc">All tools run locally in your browser. No waiting for server processing.</div>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">🔒</span>
+                <div class="feature-title">Secure</div>
+                <div class="feature-desc">Your files never leave your machine. Privacy-first by design.</div>
+            </div>
+
+            <div class="feature">
+                <span class="feature-icon">💯</span>
+                <div class="feature-title">Always Free</div>
+                <div class="feature-desc">Every tool is completely free. No premium tiers, no paywalls.</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-brand">Forge</div>
+        <p>Every digital tool, one platform. Built with ❤️ for the web.</p>
+    </footer>
+
+
+    <script src="tools.js"></script>
+    <script src="theme.js"></script>
+    <script>
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(el => {
+                if (el.isIntersecting) {
+                    el.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
 
 </body>
-
 </html>
+

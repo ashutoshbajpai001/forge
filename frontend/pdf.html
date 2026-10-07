@@ -2,118 +2,62 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Merge multiple PDF files into one document. Free, fast, no sign-up.">
     <title>PDF Merge | Forge</title>
 
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <link rel="stylesheet"
-        href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===========================
-         NAVBAR
-    ============================ -->
-
+    <!-- NAVBAR -->
     <nav class="navbar">
-
         <div class="logo">
-
-            <a href="index.html"
-                style="text-decoration:none;color:inherit;">
-
-                Forge
-
-            </a>
-
+            <a href="index.html">Forge</a>
         </div>
-
         <div class="search-box">
-
-            <input
-                type="text"
-                placeholder="Search tools...">
-
+            <input type="text" placeholder="Search tools...">
         </div>
-
         <div class="nav-right">
-
-            <button class="login-btn">
-
-                Login
-
+            <button class="login-btn">Login</button>
+            <button class="theme-btn" id="themeBtn">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
-
-            <button class="theme-btn">
-
-                <i class="fa-solid fa-moon"></i>
-
-            </button>
-
         </div>
-
     </nav>
 
-    <!-- ===========================
-         HERO
-    ============================ -->
-
+    <!-- HERO -->
     <section class="hero">
 
-        <h1>
+        <h1>PDF Merge</h1>
 
-            PDF Merge
-
-        </h1>
-
-        <p>
-
-            Merge multiple PDF files into one document.
-
-        </p>
+        <p>Merge multiple PDF files into one document. Fast and free.</p>
 
         <div class="pdf-upload">
-
-            <input
-                type="file"
-                id="pdf1"
-                accept=".pdf">
-
-            <input
-                type="file"
-                id="pdf2"
-                accept=".pdf">
-
-            <button
-                id="mergeBtn">
-
-                Merge PDFs
-
+            <input type="file" id="pdf1" accept=".pdf">
+            <input type="file" id="pdf2" accept=".pdf">
+            <button id="mergeBtn">
+                <i class="fa-solid fa-file-circle-plus"></i>&nbsp; Merge PDFs
             </button>
-
         </div>
 
-        <p
-            id="statusMessage"
-            class="error-message">
-
-        </p>
+        <p id="statusMessage" class="error-message"></p>
 
     </section>
 
+    <hr class="divider">
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-brand">Forge</div>
+        <p>Every digital tool, one platform.</p>
+    </footer>
+
     <script src="pdf.js"></script>
+    <script src="theme.js"></script>
 
 </body>
-
-</html>
+</html>

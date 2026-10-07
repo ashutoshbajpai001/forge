@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compress JPG and PNG images without losing quality. Free, fast, no sign-up.">
+    <title>Image Compressor | Forge</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Forge</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#tools">Tools</a>
+        </div>
+        <div class="nav-right">
+            <button class="login-btn">Login</button>
+            <button class="theme-btn" id="themeBtn">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>Image Compressor</h1>
+
+        <p>Compress JPG and PNG images without losing much quality.</p>
+
+        <div class="pdf-upload">
+            <input type="file" id="imageFile" accept="image/png,image/jpeg">
+
+            <label for="qualitySlider">
+                Compression Quality: <span id="qualityValue">50</span>%
+            </label>
+            <input type="range" id="qualitySlider" min="10" max="100" value="50">
+
+            <button id="compressBtn">
+                <i class="fa-solid fa-compress"></i>&nbsp; Compress Image
+            </button>
+        </div>
+
+        <p id="statusMessage" class="error-message"></p>
+
+    </section>
+
+    <hr class="divider">
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-brand">Forge</div>
+        <p>Every digital tool, one platform.</p>
+    </footer>
+
+    <script src="image.js"></script>
+    <script src="theme.js"></script>
+
+</body>
+</html>
